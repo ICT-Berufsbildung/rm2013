@@ -17,6 +17,12 @@ p.inline {
     text-indent: 0;
 }
 
+em {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+}
+
 #page {
     margin: 0 auto 36px auto;
     background-image: url(../images/grid.png);
