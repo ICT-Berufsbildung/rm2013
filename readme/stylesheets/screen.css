@@ -13,6 +13,10 @@ p {
     hyphens: auto;
 }
 
+p.inline {
+    text-indent: 0;
+}
+
 #page {
     margin: 0 auto 36px auto;
     background-image: url(../images/grid.png);
