@@ -35,7 +35,8 @@
                 </header>
                 <section class="column width2 first">
                     <div class="column width2 first">
-                        <p>This document describes the tasks for the Regionalmeisterschaft 2013 in Application Development. You have 2 hours 30 minutes to complete as many tasks as possible without the use of the Internet or any other form of communication. Each task has a short description, you’re expected to apply your knowledge and experience to implement your own solutions with the tools provided.</p>
+                        <p>This document describes the tasks for the Regionalmeisterschaft 2013 in Application Development. You have 2 hours 30 minutes to complete as many tasks as possible without the use of the Internet or any other form of communication.
+                            Each task has a short description, you’re expected to apply your knowledge and experience to implement your own solutions with the tools provided. You can use PHP or Java as a programming language.</p>
                         <h5>The project</h5>
                         <p>The project is a social network where people can sign up, connect with friends and share messages and photos with each other.</p>
                         <p>Parts of the functionality are not finished yet and need to be implemented by you. You are free to use and extend existing parts of the project or implement your own.</p>
@@ -96,24 +97,31 @@
                     </div>
                     <div class="column unitx3">
                         <p>The model of the application has different entities (message, photo and group) which are not implemented yet.</p>
-                        <p>Your task is to create 3 new tables in the MySQL database according to the following ERM diagram.
-                            It’s your job to define appropriate column definitions (not null, default, auto increment, unique, foreign key).</p>
-                        <p class="inline">&nbsp;<br><a href="readme/images/erm.png" class="fancybox"><img src="readme/images/erm.png" height="121" alt="ERM"></a></p>
+                        <p>Your task is to create 3 new tables in the MySQL database according to the following ERM diagram. It’s your job to define appropriate column definitions (not null, default, auto increment, unique, foreign key).</p>
+                        <p>Messages and photos can be posted into groups. A group consists of an ID and a name. Each group can have multiple messages and photos.
+                            A message consists of an ID, a textual message, the date it was posted, the author and the group it belongs to. A photo consists of an ID, a binary photo, the location it was taken, the date it was posted, the author and the group it belongs to.</p>
+                        <p class="inline">&nbsp;<br><a href="readme/images/erm.png" class="fancybox"><img src="readme/images/erm.png" height="103" alt="ERM"></a></p>
                     </div>
                     <div class="column unitx1 first">
-                        <h4>Task I0: Home and Detail</h4>
+                        <h4>Task I0: Home, Message and Photo</h4>
                         <p style="text-align: right;">ca. 50 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>The <a href="design/index.html">design</a> of the application has been implemented in HTML an ready to be extended with functionality.</p>
-                        <p>Your task is to implement the home and detail pages of the application with the either PHP or Java.</p>
+                        <p>The <a href="design/index.html">design</a> of the application has been implemented in HTML and is ready to be extended with functionality.</p>
+                        <p>Your task is to implement the home, message and photo page of the application. On the <a href="design/index.html">home page</a> all message and photos from the database should be displayed in chronological order (newest first).
+                            Each message should be displayed along with the date and its author. Each photo should be displayed scaled down.</p>
+                        <p>A link below each message on the home page should lead to a separate <a href="design/message.html">message page</a>. The URL to this message page should be bookmarkable. In addition the group in which the message was posted in should be displayed.</p>
+                        <p>Each photo on the home page should link to a separate <a href="design/photo.html">photo page</a> where the photo is displayed in large along with the date it was posted, the author, the location it was taken and the group it was posted in.</p>
+                        <p>A breadcrumb on both the message and the photo page should link back to the home page.</p>
                     </div>
                     <div class="column unitx1 first">
                         <h4>Task II: Group</h4>
                         <p style="text-align: right;">ca. 20 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>TODO</p>
+                        <p>Each group has a separate <a href="design/group.html">group page</a> which shows only the messages and photos posted to that specific group.</p>
+                        <p>Your task is to implement the group page in the same way as the home page, but filtered by the group. The URL to this group page should be bookmarkable. A breadcrumb on the group page should link back to the home page.</p>
+                        <p>Also implement the groups dropdown in the upper right corner on every page. It should list all groups and link to their group pages.</p>
                     </div>
                     <div class="column unitx1 first">
                         <h4>Task I00: Post Message</h4>

@@ -50,8 +50,8 @@
             <referencesTable>group</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
             <referencesTable><![CDATA[group]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
-            <destinationCardinality>0</destinationCardinality>
+            <sourceCardinality>4</sourceCardinality>
+            <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[F7B22847-0313-43EF-AC20-642C469BA33B]]></referencesFieldUID>
             <referencesTableUID><![CDATA[61CA1D43-2C32-49A6-8165-BAAED0C9635B]]></referencesTableUID>
             <connectorMidPoint><![CDATA[337.000000]]></connectorMidPoint>
@@ -69,7 +69,7 @@
         <schema><![CDATA[]]></schema>
         <location>
             <x>320.00</x>
-            <y>192.00</y>
+            <y>128.00</y>
         </location>
         <size>
             <width>192.00</width>
@@ -146,8 +146,8 @@
             <referencesTable>group</referencesTable>
             <referencesField><![CDATA[id]]></referencesField>
             <referencesTable><![CDATA[group]]></referencesTable>
-            <sourceCardinality>0</sourceCardinality>
-            <destinationCardinality>0</destinationCardinality>
+            <sourceCardinality>4</sourceCardinality>
+            <destinationCardinality>1</destinationCardinality>
             <referencesFieldUID><![CDATA[F7B22847-0313-43EF-AC20-642C469BA33B]]></referencesFieldUID>
             <referencesTableUID><![CDATA[61CA1D43-2C32-49A6-8165-BAAED0C9635B]]></referencesTableUID>
             <connectorMidPoint><![CDATA[291.000000]]></connectorMidPoint>
