@@ -165,9 +165,9 @@
                         <p>The first step is to fetch and display the messages in the left column. Each message is displayed as follows:</p>
                         <ul>
                             <li>Message text, shorten to an appropriate length (you have to decide yourself)</li>
-                            <li>Submission date in the format dd.mm.yyyy and the author name, linked to the message <a href="design/message.html">detail page</a></li>
-                            <li>Group name (linked to the group detail page)</li>
-                            <li>The query is limited to 5 entries</li>
+                            <li>Submission date in the format dd.mm.yyyy and the author name, linked to the <a href="design/message.html">message detail page</a></li>
+                            <li>Group name</li>
+                            <li>Only the last 5 messages should be displayed (limit query)</li>
                         </ul>
 
                         <p>The second step is to fetch and display the photos in the right column. Each photo is displayed as follows:</p>
@@ -175,10 +175,13 @@
                             <li>Picture, cropped to the exact format of 150x150px</li>
                             <li>The picture is linked to the photo <a href="design/photo.html">detail page</a></li>
                             <li>The picture link has a title-tag containing the author name and location if given</li>
-                            <li>The query is limited to 6 entries</li>
+                            <li>Only the last 6 photos should be display (limit query)</li>
                         </ul>
                     </div>
-                    <div class="column unitx4">
+                    <div class="column unitx1 first">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="column unitx3">
                         <p><i>The following task is an optional task:</i></p>
                     </div>
                     <div class="column unitx1 first">
@@ -186,9 +189,10 @@
                         <p style="text-align: right;">(optional)</p>
                     </div>
                     <div class="column unitx3">
-                        <p>Each group has a separate <a href="design/group.html">detail page</a> which shows only the messages and photos posted to that specific group.</p>
+                        <p>Each group has a separate <a href="design/group.html">group page</a> which shows only the messages and photos posted to that specific group.</p>
                         <p>Your task is to implement the page in the same way as the home page, but filtered by the group. The breadcrumb on the page links back to the home page.</p>
                         <p>Also implement the group dropdown in the upper right corner. It should displayed on all pages and list all groups, linked to their group pages.</p>
+                        <p>As a last step link all group names of the messages and photos on their detail page and on the home page to the group page, as displayed in the design.</p>
                     </div>
                 </section>
             </div>
