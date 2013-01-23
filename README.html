@@ -116,13 +116,12 @@
                         <p style="text-align: right;">ca. 40 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>Messages have a <a href="design/post-message.html">submission form</a> including a validation and each message has its own <a href="design/message.html">detail page</a>.</p>
-                        <p>The first step is to implement the <a href="design/post-message.html">submission form</a>. The form fields are validated and the user gets notified about form errors:</p>
+                        <p>Messages have a <a href="design/post-message.html">submission form</a> and each message has its own <a href="design/message.html">detail page</a>. Messages have to be saved in the database too.</p>
+                        <p>The first step is to implement the message submission form. The form fields have to be validated and the following validation errors have to be displayed in a user friendly way:</p>
                         <ul>
-                            <li>Author name (length between 3 and max length of database field)</li>
-                            <li>Message filled in (not empty)</li>
-                            <li>A valid group is selected</li>
-                            <li>Form validation displays user friendly notifications on wrong submissions</li>
+                            <li>Author name length is not between 3 and the max length of database field</li>
+                            <li>Message text is empty</li>
+                            <li>No valid group has been selected</li>
                         </ul>
                         <p>The second step is to create the <a href="design/message.html">detail page</a> for the messages. The page contains:</p>
                         <ul>
@@ -130,7 +129,7 @@
                             <li>Author name</li>
                             <li>Message text</li>
                             <li>Date of submission in the format dd.mm.yyyy</li>
-                            <li>Group name (linked to the group detail page)</li>
+                            <li>Group name</li>
                         </ul>
                     </div>
                     <div class="column unitx1 first">
