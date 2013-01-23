@@ -89,60 +89,107 @@
                         <p>&nbsp;</p>
                     </div>
                     <div class="column unitx3">
-                        <p>Before you start your work you have to provide your personal information inside the file <em>competitor.txt</em>. It’s then recommended to explore the <a href="design/index.html">design templates</a> first.</p>
+                        <p>Before you start your work you have to provide your personal information inside the file <em>competitor.txt</em>. It’s then recommended to explore the <a href="design/index.html">design templates</a> of the application first, since it has already been implemented in HTML and is ready to be extended with functionality.</p>
                     </div>
                     <div class="column unitx1 first">
                         <h4>Task I: Database</h4>
-                        <p style="text-align: right;">ca. 10 min</p>
+                        <p style="text-align: right;">ca. 15 min</p>
                     </div>
                     <div class="column unitx3">
                         <p>The model of the application has different entities (message, photo and group) which are not implemented yet.</p>
-                        <p>Your task is to create 3 new tables in the MySQL database according to the following ERM diagram. It’s your job to define appropriate column definitions (not null, default, auto increment, unique, foreign key).</p>
-                        <p>Messages and photos can be posted into groups. A group consists of an ID and a name. Each group can have multiple messages and photos.
-                            A message consists of an ID, a textual message, the date it was posted, the author and the group it belongs to. A photo consists of an ID, a binary photo, the location it was taken, the date it was posted, the author and the group it belongs to.</p>
+                        <p>Your task is to create three new tables in the MySQL database according to the following ERM diagram. Define appropriate column definitions (not null, default, auto increment, unique, foreign key).</p>
+                        <p>Messages and photos can be posted into groups. A group consists of an ID and a name. Each group can have multiple messages and photos. A message consists of an ID, a textual message, the date it was posted, the author and the group it belongs to. A photo consists of an ID, a binary photo, the location it was taken, the date it was posted, the author and the group it belongs to.</p>
                         <p class="inline">&nbsp;<br><a href="readme/images/erm.png" class="fancybox"><img src="readme/images/erm.png" height="103" alt="ERM"></a></p>
                     </div>
                     <div class="column unitx1 first">
-                        <h4>Task I0: Home, Message and Photo</h4>
-                        <p style="text-align: right;">ca. 50 min</p>
-                    </div>
-                    <div class="column unitx3">
-                        <p>The <a href="design/index.html">design</a> of the application has been implemented in HTML and is ready to be extended with functionality.</p>
-                        <p>Your task is to implement the home, message and photo page of the application. On the <a href="design/index.html">home page</a> all message and photos from the database should be displayed in chronological order (newest first).
-                            Each message should be displayed along with the date and its author. Each photo should be displayed scaled down.</p>
-                        <p>A link below each message on the home page should lead to a separate <a href="design/message.html">message page</a>. The URL to this message page should be bookmarkable. In addition the group in which the message was posted in should be displayed.</p>
-                        <p>Each photo on the home page should link to a separate <a href="design/photo.html">photo page</a> where the photo is displayed in large along with the date it was posted, the author, the location it was taken and the group it was posted in.</p>
-                        <p>A breadcrumb on both the message and the photo page should link back to the home page.</p>
-                    </div>
-                    <div class="column unitx1 first">
-                        <h4>Task II: Group</h4>
+                        <h4>Task I0: Group submission</h4>
                         <p style="text-align: right;">ca. 20 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>Each group has a separate <a href="design/group.html">group page</a> which shows only the messages and photos posted to that specific group.</p>
-                        <p>Your task is to implement the group page in the same way as the home page, but filtered by the group. The URL to this group page should be bookmarkable. A breadcrumb on the group page should link back to the home page.</p>
-                        <p>Also implement the groups dropdown in the upper right corner on every page. It should list all groups and link to their group pages.</p>
+                        <p>You have to implement a group <a href="design/post-group.html">submission page</a>, so that a user can add a group.</p>
+                        <p>The form submission has to be validated on the name length (between 3 and max database field length) and if the name already exists.</p>
+                        <p>The form validation displays user friendly notifications on wrong submissions.</p>
                     </div>
                     <div class="column unitx1 first">
-                        <h4>Task I00: Post Message</h4>
-                        <p style="text-align: right;">ca. 20 min</p>
+                        <h4>Task II: Messages</h4>
+                        <p style="text-align: right;">ca. 40 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>TODO</p>
+                        <p>Messages have a <a href="design/post-message.html">submission form</a> including a validation and each message has its own <a href="design/message.html">detail page</a>.</p>
+                        <p>The first step is to implement the <a href="design/post-message.html">submission form</a>. The form fields are validated and the user gets notified about form errors:</p>
+                        <ul>
+                            <li>Author name (length between 3 and max length of database field)</li>
+                            <li>Message filled in (not empty)</li>
+                            <li>A valid group is selected</li>
+                            <li>Form validation displays user friendly notifications on wrong submissions</li>
+                        </ul>
+                        <p>The second step is to create the <a href="design/message.html">detail page</a> for the messages. The page contains:</p>
+                        <ul>
+                            <li>Breadcrumb on top which links to the front page</li>
+                            <li>Author name</li>
+                            <li>Message text</li>
+                            <li>Date of submission in the format dd.mm.yyyy</li>
+                            <li>Group name (linked to the group detail page)</li>
+                        </ul>
                     </div>
                     <div class="column unitx1 first">
-                        <h4>Task I0I: Post Photo</h4>
+                        <h4>Task I00: Photos</h4>
                         <p style="text-align: right;">ca. 30 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>TODO</p>
+                        <p>Like messages, photos have a <a href="design/post-photo.html">submission form</a> including a validation and an own <a href="design/photo.html">detail page</a>.</p>
+                        <p>The first step is to implement the <a href="design/post-photo.html">submission form</a>. The form fields are validated and the user gets notified about form errors:</p>
+                        <ul>
+                            <li>Author name (length between 3 and max length of database field)</li>
+                            <li>Photo file is attached and its type is of the format jpeg or png</li>
+                            <li>Optional, a location name is added (validated on max length of database field)</li>
+                            <li>A valid group is selected</li>
+                            <li>Form validation displays user friendly notifications on wrong submissions</li>
+                        </ul>
+                        <p><a href="design/photo.html">Detail page</a>, containing:</p>
+                        <ul>
+                            <li>Breadcrumb on top which links to the front page</li>
+                            <li>Author name</li>
+                            <li>Picture, scaled to a maximum width of 700px</li>
+                            <li>Location if given</li>
+                            <li>Date of submission in the format dd.mm.yyyy</li>
+                            <li>Group name (linked to the group detail page)</li>
+                        </ul>
                     </div>
                     <div class="column unitx1 first">
-                        <h4>Task II0: Create Group</h4>
-                        <p style="text-align: right;">ca. 20 min</p>
+                        <h4>Task I0I: Home page</h4>
+                        <p style="text-align: right;">ca. 15 min</p>
                     </div>
                     <div class="column unitx3">
-                        <p>TODO</p>
+                        <p>The <a href="design/index.html">home page</a> displays all messages and photos from the database in a chronological order (newest first).</p>
+
+                        <p>The first step is to fetch and display the messages in the left column. Each message is displayed as follows:</p>
+                        <ul>
+                            <li>Message text, shorten to an appropriate length (you have to decide yourself)</li>
+                            <li>Submission date in the format dd.mm.yyyy and the author name, linked to the message <a href="design/message.html">detail page</a></li>
+                            <li>Group name (linked to the group detail page)</li>
+                            <li>The query is limited to 5 entries</li>
+                        </ul>
+
+                        <p>The second step is to fetch and display the photos in the right column. Each photo is displayed as follows:</p>
+                        <ul>
+                            <li>Picture, cropped to the exact format of 150x150px</li>
+                            <li>The picture is linked to the photo <a href="design/photo.html">detail page</a></li>
+                            <li>The picture link has a title-tag containing the author name and location if given</li>
+                            <li>The query is limited to 6 entries</li>
+                        </ul>
+                    </div>
+                    <div class="column unitx4">
+                        <p><i>The following task is an optional task:</i></p>
+                    </div>
+                    <div class="column unitx1 first">
+                        <h4>Task II0: Group detail page</h4>
+                        <p style="text-align: right;">(optional)</p>
+                    </div>
+                    <div class="column unitx3">
+                        <p>Each group has a separate <a href="design/group.html">detail page</a> which shows only the messages and photos posted to that specific group.</p>
+                        <p>Your task is to implement the page in the same way as the home page, but filtered by the group. The breadcrumb on the page links back to the home page.</p>
+                        <p>Also implement the group dropdown in the upper right corner. It should displayed on all pages and list all groups, linked to their group pages.</p>
                     </div>
                 </section>
             </div>
