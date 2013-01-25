@@ -7,7 +7,14 @@
         </zip>
     </target>
 
+    <target name="zip-no-software">
+        <zip destfile="rm2013-no-software.zip">
+            <zipfileset dir="." prefix="rm2013" excludes=".git,build.xml,rm2013.zip,rm2013-solution.zip,erm.sqs,README.md,software/**" />
+        </zip>
+    </target>
+
     <target name="clean">
         <delete file="rm2013.zip" />
+        <delete file="rm2013-no-software.zip" />
     </target>
 </project>
