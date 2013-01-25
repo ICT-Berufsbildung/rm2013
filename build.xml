@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Regionalmeisterschaft" default="zip">
+
+    <target name="zip">
+        <zip destfile="rm2013.zip">
+            <zipfileset dir="." prefix="rm2013" excludes=".git,build.xml,rm2013.zip,rm2013-solution.zip,erm.sqs" />
+        </zip>
+    </target>
+
+    <target name="clean">
+        <delete file="rm2013.zip" />
+    </target>
+</project>
